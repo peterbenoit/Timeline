@@ -1,0 +1,37 @@
+make a modern version of a this vertical timeline based on what is found in original.html and original.css
+
+should be responsive (this will exist in a Bootstrap 5 template if that helps)
+
+might could be a OL instead of UL, since a timeline denotes order; you choose based on semantic significance
+
+don't use original html or css, no matching classes or anything; ONLY re-use the content
+
+ignore the attempts folder, these aren't working right
+
+css should be wrapped in a way similar to original.css
+
+would be nice if elements alternated by default, unless specified by a classname to be on the left or right
+
+do not us JS
+
+the timeline should have a line down the middle, separating the left and right timeline items
+
+the dots for each item should line up on this line
+
+2020 |
+     | 2017
+2014 |
+     |
+     |
+     |
+     | 2010
+
+again, do not directly use HTML or CSS from existing. I want something new and useful
+
+add 5 timeline items in the list so I can test them, use the original timeline item content as much as you can
+
+create a full HTML document and link to the CSS you create
+
+REMEMBER: this is a vertical timeline
+
+Try not to let it look boostrappy

@@ -1,0 +1,97 @@
+/* filepath: timeline.css */
+.timeline {
+	position: relative;
+	padding: 0;
+	list-style: none;
+}
+
+/* Vertical line down the middle */
+.timeline::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	width: 2px;
+	background-color: #ccc;
+	transform: translateX(-50%);
+}
+
+.timeline-item {
+	position: relative;
+	margin-bottom: 50px;
+	width: 100%;
+}
+
+/* Alternate items to the left and right */
+.timeline-item:nth-child(odd) {
+	padding-right: 50%;
+}
+
+.timeline-item:nth-child(even) {
+	padding-left: 50%;
+}
+
+/* Override for items that should always be on one side */
+.timeline-item-alternate {
+	padding-left: 50% !important;
+}
+
+.timeline-content {
+	position: relative;
+	padding: 15px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Dot aligning with the vertical line */
+.timeline-content::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	border: 3px solid #ccc;
+	border-radius: 50%;
+	z-index: 1;
+	transform: translateY(-50%);
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+	right: -30px;
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+	left: -30px;
+}
+
+.timeline-title {
+	margin-top: 0;
+	margin-bottom: 5px;
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+	.timeline::before {
+		left: 10px;
+	}
+
+	.timeline-item {
+		padding-left: 40px !important;
+		padding-right: 0 !important;
+	}
+
+	.timeline-item .timeline-content {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.timeline-item .timeline-content::before {
+		left: -30px;
+	}
+}

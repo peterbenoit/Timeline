@@ -1,0 +1,136 @@
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:wght@400;700&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Nunito', sans-serif;
+	line-height: 1.6;
+	padding: 20px;
+	background: #f5f7fa;
+	/* Updated light background */
+}
+
+.timeline-container {
+	position: relative;
+	padding: 40px 0;
+}
+
+.timeline {
+	list-style: none;
+	position: relative;
+	padding: 20px 0;
+}
+
+/* Vertical line down the center */
+.timeline::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 3px;
+	background: #3498db;
+	/* Updated accent color */
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+/* Timeline Item */
+.timeline-item {
+	position: relative;
+	width: 50%;
+	padding: 20px 40px;
+}
+
+/* Dot on the timeline */
+.timeline-item .timeline-dot {
+	position: absolute;
+	top: 20px;
+	width: 16px;
+	height: 16px;
+	background: #fff;
+	border: 3px solid #3498db;
+	/* Updated dot color */
+	border-radius: 50%;
+	z-index: 1;
+}
+
+/* Left items */
+.timeline-item.left {
+	left: 0;
+	text-align: right;
+}
+
+.timeline-item.left .timeline-content {
+	margin-right: 20px;
+	padding: 15px 20px;
+	background: #fff;
+	/* Changed from gray to white */
+	border-radius: 4px;
+	display: inline-block;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	/* Added shadow for modern look */
+}
+
+.timeline-item.left .timeline-dot {
+	right: -8px;
+}
+
+/* Right items */
+.timeline-item.right {
+	left: 50%;
+	text-align: left;
+}
+
+.timeline-item.right .timeline-content {
+	margin-left: 20px;
+	padding: 15px 20px;
+	background: #fff;
+	border-radius: 4px;
+	display: inline-block;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item.right .timeline-dot {
+	left: -8px;
+}
+
+/* Timeline title */
+.timeline-title {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.3em;
+	margin-bottom: 8px;
+	color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.timeline-item {
+		width: 100%;
+		padding: 20px;
+	}
+
+	.timeline-item.left,
+	.timeline-item.right {
+		left: 0;
+		text-align: left;
+	}
+
+	.timeline-item.left .timeline-content,
+	.timeline-item.right .timeline-content {
+		margin: 0 0 0 40px;
+	}
+
+	.timeline-item.left .timeline-dot,
+	.timeline-item.right .timeline-dot {
+		left: 10px;
+	}
+
+	.timeline::before {
+		left: 18px;
+	}
+}
