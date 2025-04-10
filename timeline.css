@@ -105,6 +105,14 @@ body {
 }
 
 .timeline-content {
+	position: relative;
+	padding: 25px 30px;
+	border-radius: 8px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease;
+}
+
+.timeline-content-inner {
 	max-height: 300px;
 	overflow-y: auto;
 	overflow-x: hidden;
@@ -112,16 +120,16 @@ body {
 	scrollbar-color: var(--colors-gray-cool-10) white;
 }
 
-.timeline-content::-webkit-scrollbar {
+.timeline-content-inner::-webkit-scrollbar {
 	width: 4px;
 }
 
-.timeline-content::-webkit-scrollbar-track {
+.timeline-content-inner::-webkit-scrollbar-track {
 	background: white;
 	border-radius: 3px;
 }
 
-.timeline-content::-webkit-scrollbar-thumb {
+.timeline-content-inner::-webkit-scrollbar-thumb {
 	background-color: var(--colors-gray-cool-10);
 	border-radius: 3px;
 }
@@ -147,13 +155,13 @@ body {
 .timeline-item.left .timeline-content:after {
 	content: "";
 	position: absolute;
-	right: -15px;
+	right: -10px;
 	top: 20px;
 	width: 0;
 	height: 0;
-	border-top: 15px solid transparent;
-	border-bottom: 15px solid transparent;
-	border-left: 15px solid #fff;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid #fff;
 }
 
 .timeline-item.right {
@@ -178,13 +186,13 @@ body {
 .timeline-item.right .timeline-content:after {
 	content: "";
 	position: absolute;
-	left: -15px;
+	left: -10px;
 	top: 20px;
 	width: 0;
 	height: 0;
-	border-top: 15px solid transparent;
-	border-bottom: 15px solid transparent;
-	border-right: 15px solid #fff;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-right: 10px solid #fff;
 }
 
 .timeline-item .timeline-content:hover {

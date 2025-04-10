@@ -67,7 +67,9 @@ document.addEventListener('DOMContentLoaded', function () {
                         <div class="timeline-content">
                             ${event.topic ? `<span class="timeline-topic">${event.topic}</span>` : ''}
                             <h2 class="timeline-date">${event.date}</h2>
-                            <p>${event.description}</p>
+                            <div class="timeline-content-inner">
+                                <p>${event.description}</p>
+                            </div>
                         </div>
                     `;
 					timelineElement.appendChild(timelineItem);
@@ -114,7 +116,9 @@ document.addEventListener('DOMContentLoaded', function () {
                         <div class="timeline-content">
                             ${event.topic ? `<span class="timeline-topic">${event.topic}</span>` : ''}
                             <h2 class="timeline-date">${event.date}</h2>
-                            <p>${event.description}</p>
+                            <div class="timeline-content-inner">
+                                <p>${event.description}</p>
+                            </div>
                         </div>
                     `;
 					timelineElement.appendChild(timelineItem);
