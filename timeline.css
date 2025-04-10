@@ -48,6 +48,10 @@ body {
 	padding: 60px 0;
 }
 
+.timeline-container.narrow {
+	max-width: 800px;
+}
+
 .timeline {
 	list-style: none;
 	position: relative;
@@ -276,6 +280,7 @@ body {
 	.timeline-item {
 		width: 100%;
 		padding: 20px;
+		padding-top: 0;
 	}
 
 	.timeline-item.left,
